@@ -1,4 +1,4 @@
-module project-protos
+module github.com/4nar1k/project-protos
 
 go 1.24
 
