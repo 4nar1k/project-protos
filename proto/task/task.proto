@@ -38,16 +38,16 @@ message DeleteTaskResponse {
   bool success = 1;
 }
 
-message ListTasksRequest {
+message ListTasksForUserRequest {
   uint32 user_id = 1;
 }
 
-message ListTasksResponse {
+message ListTasksForUserResponse {
   repeated Task tasks = 1;
 }
-message ListAllTasksRequest {}
+message ListTasksRequest {}
 
-message ListAllTasksResponse {
+message ListTasksResponse {
   repeated Task tasks = 1;
 }
 
@@ -56,6 +56,6 @@ service TaskService {
   rpc GetTask (GetTaskRequest) returns (Task);
   rpc UpdateTask(UpdateTaskRequest) returns (UpdateTaskResponse);
   rpc DeleteTask(DeleteTaskRequest) returns (DeleteTaskResponse);
+  rpc ListTasksForUser(ListTasksForUserRequest) returns (ListTasksForUserResponse);
   rpc ListTasks(ListTasksRequest) returns (ListTasksResponse);
-  rpc ListAllTasks(ListAllTasksRequest) returns (ListAllTasksResponse);
 }
