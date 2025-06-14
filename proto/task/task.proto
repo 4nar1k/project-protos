@@ -46,6 +46,11 @@ message ListTasksRequest {
 message ListTasksResponse {
   repeated Task tasks = 1;
 }
+message ListAllTasksRequest {}
+
+message ListAllTasksResponse {
+  repeated Task tasks = 1;
+}
 
 service TaskService {
   rpc CreateTask(CreateTaskRequest) returns (CreateTaskResponse);
@@ -53,4 +58,5 @@ service TaskService {
   rpc UpdateTask(UpdateTaskRequest) returns (UpdateTaskResponse);
   rpc DeleteTask(DeleteTaskRequest) returns (DeleteTaskResponse);
   rpc ListTasks(ListTasksRequest) returns (ListTasksResponse);
+  rpc ListAllTasks(ListAllTasksRequest) returns (ListAllTasksResponse);
 }
