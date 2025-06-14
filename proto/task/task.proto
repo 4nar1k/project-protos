@@ -8,7 +8,10 @@ message Task {
   bool is_done = 3;
   uint32 user_id = 4;
 }
-
+message GetTaskRequest {
+  uint32 id = 1;
+  uint32 user_id = 2;
+}
 message CreateTaskRequest {
   string title = 1;
   uint32 user_id = 2;
@@ -46,7 +49,7 @@ message ListTasksResponse {
 
 service TaskService {
   rpc CreateTask(CreateTaskRequest) returns (CreateTaskResponse);
-  rpc GetTask(Task) returns (Task);
+  rpc GetTask (GetTaskRequest) returns (Task);
   rpc UpdateTask(UpdateTaskRequest) returns (UpdateTaskResponse);
   rpc DeleteTask(DeleteTaskRequest) returns (DeleteTaskResponse);
   rpc ListTasks(ListTasksRequest) returns (ListTasksResponse);
