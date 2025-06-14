@@ -6,7 +6,9 @@ message User {
   uint32 id    = 1;
   string email = 2;
 }
-
+message GetUserRequest {
+  uint32 id = 1;
+}
 message CreateUserRequest {
   string email = 1;
 }
