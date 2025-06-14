@@ -497,12 +497,11 @@ const file_proto_user_proto_rawDesc = "" +
 	"\x10ListUsersRequest\"5\n" +
 	"\x11ListUsersResponse\x12 \n" +
 	"\x05users\x18\x01 \x03(\v2\n" +
-	".user.UserR\x05users2\xb1\x02\n" +
+	".user.UserR\x05users2\xbb\x02\n" +
 	"\vUserService\x12?\n" +
 	"\n" +
-	"CreateUser\x12\x17.user.CreateUserRequest\x1a\x18.user.CreateUserResponse\x12!\n" +
-	"\aGetUser\x12\n" +
-	".user.User\x1a\n" +
+	"CreateUser\x12\x17.user.CreateUserRequest\x1a\x18.user.CreateUserResponse\x12+\n" +
+	"\aGetUser\x12\x14.user.GetUserRequest\x1a\n" +
 	".user.User\x12?\n" +
 	"\n" +
 	"UpdateUser\x12\x17.user.UpdateUserRequest\x1a\x18.user.UpdateUserResponse\x12?\n" +
@@ -540,7 +539,7 @@ var file_proto_user_proto_depIdxs = []int32{
 	0, // 1: user.UpdateUserResponse.user:type_name -> user.User
 	0, // 2: user.ListUsersResponse.users:type_name -> user.User
 	2, // 3: user.UserService.CreateUser:input_type -> user.CreateUserRequest
-	0, // 4: user.UserService.GetUser:input_type -> user.User
+	1, // 4: user.UserService.GetUser:input_type -> user.GetUserRequest
 	4, // 5: user.UserService.UpdateUser:input_type -> user.UpdateUserRequest
 	6, // 6: user.UserService.DeleteUser:input_type -> user.DeleteUserRequest
 	8, // 7: user.UserService.ListUsers:input_type -> user.ListUsersRequest
