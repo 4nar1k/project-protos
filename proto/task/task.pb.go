@@ -92,7 +92,6 @@ func (x *Task) GetUserId() uint32 {
 type GetTaskRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Id            uint32                 `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
-	UserId        uint32                 `protobuf:"varint,2,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -130,13 +129,6 @@ func (*GetTaskRequest) Descriptor() ([]byte, []int) {
 func (x *GetTaskRequest) GetId() uint32 {
 	if x != nil {
 		return x.Id
-	}
-	return 0
-}
-
-func (x *GetTaskRequest) GetUserId() uint32 {
-	if x != nil {
-		return x.UserId
 	}
 	return 0
 }
@@ -606,10 +598,9 @@ const file_proto_task_proto_rawDesc = "" +
 	"\x02id\x18\x01 \x01(\rR\x02id\x12\x14\n" +
 	"\x05title\x18\x02 \x01(\tR\x05title\x12\x17\n" +
 	"\ais_done\x18\x03 \x01(\bR\x06isDone\x12\x17\n" +
-	"\auser_id\x18\x04 \x01(\rR\x06userId\"9\n" +
+	"\auser_id\x18\x04 \x01(\rR\x06userId\" \n" +
 	"\x0eGetTaskRequest\x12\x0e\n" +
-	"\x02id\x18\x01 \x01(\rR\x02id\x12\x17\n" +
-	"\auser_id\x18\x02 \x01(\rR\x06userId\"B\n" +
+	"\x02id\x18\x01 \x01(\rR\x02id\"B\n" +
 	"\x11CreateTaskRequest\x12\x14\n" +
 	"\x05title\x18\x01 \x01(\tR\x05title\x12\x17\n" +
 	"\auser_id\x18\x02 \x01(\rR\x06userId\"4\n" +
